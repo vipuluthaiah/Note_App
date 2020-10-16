@@ -15,13 +15,14 @@ dependencies:
   sqflite: any
   path_provider: any
   intl: ^0.16.1
+  simple_animations:
+
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   lint: ^1.2.0
-
 flutter:
   uses-material-design: true
   fonts:
@@ -41,3 +42,5 @@ flutter:
     - family: Amaranth
       fonts:
         - asset: fonts/Amaranth-Regular.ttf
+
+

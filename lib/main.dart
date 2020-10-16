@@ -1,5 +1,5 @@
+import 'package:Note_App/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
-import 'package:Note_App/screens/note_list.dart';
 
 void main() {
   runApp(Home());
@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      home: NoteList(),
+      home: SplashScreen(),
     );
   }
 }
