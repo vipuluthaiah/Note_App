@@ -1,3 +1,4 @@
+import 'package:Note_App/screens/box.dart';
 import 'package:flutter/material.dart';
 // ignore: directives_ordering
 import 'dart:async' show Timer;
@@ -15,8 +16,8 @@ class _SplashScreenState extends State<SplashScreen>
   CurvedAnimation _iconAnimation;
 
   void handleTimeOut() {
-    Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (BuildContext context) => new NoteList()));
+    Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (BuildContext context) => new NoteList()));
   }
 
   startTimeout() async {
@@ -44,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen>
         children: <Widget>[
           Container(
             decoration: BoxDecoration(
-              color: Colors.black,
+              color: Colors.white,
             ),
           ),
           Column(
@@ -58,29 +59,34 @@ class _SplashScreenState extends State<SplashScreen>
                     children: <Widget>[
                       Flexible(
                         child: SizedBox(
-                          height: 100,
-                        ),
-                      ),
-                      CircleAvatar(
-                        backgroundImage: NetworkImage(
-                            "https://media.giphy.com/media/eMUcrIszB83e9qigiZ/giphy.gif"),
-                        backgroundColor: Colors.red,
-                        radius: 80.0,
-                      ),
-                      Flexible(
-                        child: SizedBox(
-                          height: 150,
+                          height: 400,
                         ),
                       ),
                       Center(
-                        child: Text(
-                          "NOTES APP",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 33.0,
-                              fontWeight: FontWeight.bold),
+                        child: Container(
+                          width: 220,
+                          height: 220,
+                          padding: EdgeInsets.all(8),
+                          decoration: nMbox,
+                          child: Container(
+                            decoration: nMbox,
+                            padding: EdgeInsets.all(3),
+                            child: Center(
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                      // image: AssetImage('assets/avatar.JPG'),
+                                      image: new NetworkImage(
+                                          "https://i.imgur.com/UDal7nk.png")),
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
                       ),
+                     
+                    
                     ],
                   ),
                 ),
@@ -90,10 +96,11 @@ class _SplashScreenState extends State<SplashScreen>
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    const CircularProgressIndicator(backgroundColor: Colors.red),
+                    const CircularProgressIndicator(
+                        backgroundColor: Colors.red),
                     Padding(padding: EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 15.0)),
                     Text(
-                      "  CREATED BY\nU r name",
+                      "  ",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 15.0,
