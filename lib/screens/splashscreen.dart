@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'dart:async' show Timer;
 
 import 'note_list.dart';
-
+//You can further custom this splash screen
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
